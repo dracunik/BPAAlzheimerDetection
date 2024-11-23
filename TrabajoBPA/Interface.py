@@ -2,11 +2,14 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-# Rutas de los archivos pickle
-ruta_modelo = r'Modelo.pickle'
-ruta_minmax_scaler = r'MinMax.pickle'
-ruta_onehot_encoder = r'oneHE.pickle'
-ruta_ordinal_encoder = r'ordEN.pickle'
+# Obtener el directorio del script
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Rutas de los archivos pickle basadas en el directorio del script
+ruta_modelo = os.path.join(base_dir, 'Modelo.pickle')
+ruta_minmax_scaler = os.path.join(base_dir, 'MinMax.pickle')
+ruta_onehot_encoder = os.path.join(base_dir, 'oneHE.pickle')
+ruta_ordinal_encoder = os.path.join(base_dir, 'ordEN.pickle')
 
 # Cargar los pickles
 with open(ruta_modelo, 'rb') as f:
