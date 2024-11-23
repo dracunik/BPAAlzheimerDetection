@@ -3,16 +3,16 @@ import pickle
 import pandas as pd
 
 # Cargar los pickles
-with open('modelo.pkl', 'rb') as f:
+with open('TrabajoBPA/Modelo.pickle', 'rb') as f:
     modelo = pickle.load(f)
 
-with open('minmax_scaler.pkl', 'rb') as f:
+with open('TrabajoBPA/MinMax.pickle', 'rb') as f:
     minmax_scaler = pickle.load(f)
 
-with open('onehot_encoder.pkl', 'rb') as f:
+with open('TrabajoBPA/oneHE.pickle', 'rb') as f:
     onehot_encoder = pickle.load(f)
 
-with open('ordinal_encoder.pkl', 'rb') as f:
+with open('TrabajoBPA/ordEN.pickle', 'rb') as f:
     ordinal_encoder = pickle.load(f)
 
 # Columnas asociadas a cada transformador
