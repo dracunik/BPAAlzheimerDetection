@@ -2,26 +2,17 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-# Obtener el directorio del script
-base_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Rutas de los archivos pickle basadas en el directorio del script
-ruta_modelo = os.path.join(base_dir, 'Modelo.pickle')
-ruta_minmax_scaler = os.path.join(base_dir, 'MinMax.pickle')
-ruta_onehot_encoder = os.path.join(base_dir, 'oneHE.pickle')
-ruta_ordinal_encoder = os.path.join(base_dir, 'ordEN.pickle')
-
 # Cargar los pickles
-with open(ruta_modelo, 'rb') as f:
+with open('modelo.pkl', 'rb') as f:
     modelo = pickle.load(f)
 
-with open(ruta_minmax_scaler, 'rb') as f:
+with open('minmax_scaler.pkl', 'rb') as f:
     minmax_scaler = pickle.load(f)
 
-with open(ruta_onehot_encoder, 'rb') as f:
+with open('onehot_encoder.pkl', 'rb') as f:
     onehot_encoder = pickle.load(f)
 
-with open(ruta_ordinal_encoder, 'rb') as f:
+with open('ordinal_encoder.pkl', 'rb') as f:
     ordinal_encoder = pickle.load(f)
 
 # Columnas asociadas a cada transformador
